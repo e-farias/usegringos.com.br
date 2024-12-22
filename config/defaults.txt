@@ -1,9 +1,9 @@
-primary_color = #46459B
+primary_color = #0B0B0B
 secondary_color = #F7D1E6
 background_color = #ffffff
-text_color = #000000
+text_color = #0B0B0B
 accent_color = #35B69F
-footer_background_color = #46459B
+footer_background_color = #0B0B0B
 footer_foreground_color = #ffffff
 head_background = primary
 head_fix = 1

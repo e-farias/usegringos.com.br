@@ -19,16 +19,10 @@
     {% if show_topbar %}
         <section class="js-topbar section-topbar {% if not has_ad_bar %}d-none d-md-block{% endif %}">
             <div class="container-fluid">
-                <div class="row">
-                    <div class="col text-left d-none d-md-block">
-                        {% include "snipplets/social/social-links.tpl" %}
-                    </div>
-                    {% if has_ad_bar %}
-                        {% snipplet "header/header-advertising.tpl" %}
-                    {% endif %}
-                    <div class="col text-right d-none d-md-block">
-                        {% include "snipplets/navigation/navigation-lang.tpl" %}
-                    </div>
+                <div class="row justify-content-center text-primary py-1">
+                    <strong>FRETE GRÁTIS</strong>   
+                    <span class="mx-2">|</span>
+                    <span>COMPRAS ACIMA DE R$ 300</span>
                 </div>
             </div>
         </section>
