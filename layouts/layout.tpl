@@ -8,6 +8,29 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>{{ page_title }}</title>
         <meta name="description" content="{{ page_description }}" />
+        
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lexend+Exa:wght@100..900&family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+        <style>
+            .font-lexend {
+                font-family: "Lexend", serif;
+                font-optical-sizing: auto;
+                font-style: normal;
+            }
+            .font-lexend-exa {
+                font-family: "Lexend Exa", serif;
+                font-optical-sizing: auto;
+                font-style: normal;
+            }
+            .font-josefin-sans {
+                font-family: "Josefin Sans", serif;
+                font-optical-sizing: auto;
+                font-style: normal;
+            }
+        </style>
+
 
         {# Preload of first image of Slider to improve LCP #}
         {% if template == 'home'%}

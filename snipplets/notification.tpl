@@ -1,7 +1,7 @@
 {# Cookie validation #}
 
 {% if show_cookie_banner and not params.preview %}
-    <div class="js-notification js-notification-cookie-banner notification notification-fixed-bottom notification-above notification-primary col-12 col-lg-6 offset-lg-3 opacity-90" style="display: none;">
+    <div class="js-notification js-notification-cookie-banner notification notification-fixed-bottom notification-above notification-primary col-12 opacity-90 font-josefin-sans" style="display: none;">
         <div class="mb-4">{{ 'Al navegar por este sitio <strong>aceptás el uso de cookies</strong> para agilizar tu experiencia de compra.' | translate }}</div>
         <div class="text-center mb-3">
             <a href="#" class="js-notification-close js-acknowledge-cookies btn btn-secondary btn-medium invert" data-amplitude-event-name="cookie_banner_acknowledge_click">{{ "Entendido" | translate }}</a>
