@@ -1107,7 +1107,7 @@ p{
   margin: 15px 0;
   vertical-align: middle;
   max-width: 90%;
-  max-height: 50px;
+  max-height: 32px;
   {% endraw %}  
     {% if (settings.logo_position_mobile == 'center' and settings.head_utility == 'icons') %}
       {# Padding added to keep logo centered when nav has 1 icon on left and 2 icons on right #}
@@ -1123,7 +1123,7 @@ p{
 }
 
 .logo-img-big {
-  max-height: 80px;
+  max-height: 40px;
 }
 
 {# /* // Cart widget and search */ #}
@@ -1733,9 +1733,9 @@ p{
     height: auto;
     {% endraw %}
       {% if settings.logo_position_desktop == 'center' %}
-        max-height: 50px;
+        max-height: 32px;
       {% else %}
-        max-height: 80px;
+        max-height: 40px;
       {% endif %}
       max-width: 80%;
       {% if (settings.logo_position_mobile == 'center' and settings.head_utility == 'icons') %}
@@ -1759,7 +1759,7 @@ p{
   }
 
   .logo-desktop-center .logo-img-big {
-    max-height: 80px;
+    max-height: 40px;
   }
 
   .logo-img-small,

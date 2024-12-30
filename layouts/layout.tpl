@@ -6,9 +6,19 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>{{ page_title }}</title>
+        {# <title>{{ page_title }}</title> #}
+        <title>Gringos</title>
         <meta name="description" content="{{ page_description }}" />
-        
+
+        {# Favicon #}
+        <link rel="manifest" href="{{ 'favicon/site.webmanifest' | static_url }}" />
+        <link rel="icon" type="image/png" href="{{ 'favicon/favicon-96x96.png' | static_url }}" sizes="96x96" />
+        <link rel="icon" type="image/svg+xml" href="{{ 'favicon/favicon.svg' | static_url }}" />
+        <link rel="shortcut icon" href="{{ 'favicon/favicon.ico' | static_url }}" />
+        <link rel="apple-touch-icon" sizes="180x180" href="{{ 'favicon/apple-touch-icon.png' | static_url }}" />
+        <meta name="apple-mobile-web-app-title" content="Gringos" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="0B0B0B">
+
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -207,6 +217,9 @@
                     {% include "static/js/store.js.tpl" %}
                 {% endif %}
             });
+
+            {# Custom theme script #}
+            {% include "static/js/custom.js.tpl" %}
         </script>
 
         {# Google reCAPTCHA on register page #}

@@ -869,7 +869,7 @@ button{
 .head-main {
   &.compress {
     .logo-img {
-        max-height: 35px;
+        max-height: 30px;
     }
   }
   a {
@@ -1804,9 +1804,9 @@ body.compensate-for-scrollbar{overflow:hidden}.fancybox-active{height:auto}.fanc
 
   .head-main {
     &.compress {
-      .logo-img {
-          max-height: 50px;
-      }
+		.logo-img {
+			max-height: 32px;
+		}
     }
   }
 

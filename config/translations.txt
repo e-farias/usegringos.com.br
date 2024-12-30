@@ -446,7 +446,7 @@ es_mx "Comunicate por WhatsApp"
 --- --- Notifications
 
 es "Al navegar por este sitio <strong>aceptás el uso de cookies</strong> para agilizar tu experiencia de compra."
-pt "Ao navegar por este site <strong>você aceita o uso de cookies</strong> para agilizar a sua experiência de compra."
+pt "Ao navegar por este site <strong>você aceita o uso de cookies</strong> para melhorar a sua experiência de compra."
 en "While navigating this site <strong>you accept the use of cookies</strong> to improve your shopping experience."
 es_mx "Al navegar por este sitio <strong>aceptas el uso de cookies</strong> para agilizar tu experiencia de compra."
 
@@ -1574,12 +1574,12 @@ es_mx "La página que buscas no existe."
 --- --- Login
 
 es "Iniciá sesión"
-pt "Iniciar sessão"
+pt "Entrar"
 en "Log in"
 es_mx "Inicia sesión"
 
 es "Iniciar sesión"
-pt "Iniciar sessão"
+pt "Entrar"
 en "Log in"
 es_mx "Iniciar sesión"
 

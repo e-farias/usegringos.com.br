@@ -27,15 +27,15 @@
             </div>
         </section>
     {% endif %}
-	<div class="container-fluid {% if settings.head_utility == 'searchbox' %}pb-3 pb-md-0{% endif %}">
-		<div class="{% if not settings.head_fix %}js-nav-logo-bar{% endif %} row no-gutters align-items-center">
+	<div class="container-fluid">
+		<div class="{% if not settings.head_fix %}js-nav-logo-bar{% endif %} row no-gutters align-items-center p-2 px-lg-2 py-lg-1">
 
             {# Menu icon for all mobile combinations except when categories are exposed and logo is centered #}
             <!-- {% if settings.head_utility == 'searchbox' or settings.head_utility == 'icons' or (settings.logo_position_mobile == 'left' and settings.head_utility == 'categories') %}
             {% endif %} -->
             <div class="col-auto {% if settings.logo_position_mobile == 'left' %}order-last ml-2{% else %}text-left{% endif %} d-block d-md-none">
                 <a href="#" class="js-modal-open utilities-link utilities-item" data-toggle="#nav-hamburger" aria-label="{{ 'Menú' | translate }}" data-component="menu-button">
-                    <svg class="icon-inline icon-2x icon-w-14"><use xlink:href="#bars"/></svg>
+                    <svg class="icon-inline icon-2x icon-w-12"><use xlink:href="#bars"/></svg>
                 </a>
                 <!-- {% if store.country == 'AR'%}
                     {# Notification icon for quick login on AR stores #}
@@ -43,25 +43,28 @@
                 <div class="js-quick-login-badge badge badge-overlap swing" style="display: none;"></div>
             </div>
 
-            {# Search icon ued for mobile when categories are exposed #}
-            {% if settings.head_utility == 'categories' or (settings.head_utility == 'categories' and settings.logo_position_mobile == 'left') or settings.head_utility == 'icons' %}
-                <div class="col-auto {% if settings.logo_position_mobile == 'left' or (settings.logo_position_mobile == 'center' and settings.head_utility == 'icons') %}order-2 {% if not (settings.logo_position_mobile == 'center' and settings.head_utility == 'icons') %}ml-2{% endif %}{% else %}text-left{% endif %} d-block d-md-none">
-                    <a href="#" class="js-modal-open utilities-link utilities-item" data-toggle="#nav-search" aria-label="{{ 'Buscador' | translate }}">
-                        <svg class="icon-inline icon-2x"><use xlink:href="#search"/></svg>
-                    </a>
-                </div>
-            {% endif %}
-
             {# Logo for mobile and desktop #}
-
 			<div class="{% if settings.logo_position_desktop == 'center' %}{% if settings.icons_size_desktop == 'big' %}col-md-6 col-lg-6{% else %}col-md-4 col-lg-4{% endif %}{% else %}col-md-3 col-lg-3{% endif %} {% if settings.logo_position_mobile == 'left' %}col text-left{% else %}col text-center{% endif %} {% if settings.logo_position_desktop == 'center' %}text-md-center {% if settings.icons_size_desktop == 'small' %}offset-md-1{% endif %} order-md-2{% else %}text-md-left{% endif %}">
                 {% set logo_size_class = settings.logo_size == 'small' ? 'logo-img-small' : settings.logo_size == 'big' ? 'logo-img-big' %}
-                {{ component('logos/logo', {logo_img_classes: 'transition-soft ' ~ logo_size_class, logo_text_classes: 'h5 h3-md mb-0'}) }}
+                {{ component('logos/logo', {logo_img_classes: 'transition-soft pl-4 ' ~ logo_size_class, logo_text_classes: 'h5 h3-md mb-0'}) }}
+            </div>
+
+            {# Search icon used for mobile when categories are exposed #}
+            {# {% if settings.head_utility == 'categories' or (settings.head_utility == 'categories' and settings.logo_position_mobile == 'left') or settings.head_utility == 'icons' %}
+            {% endif %} #}
+            <div class="col-auto {% if settings.logo_position_mobile == 'left' or (settings.logo_position_mobile == 'center' and settings.head_utility == 'icons') %}order-2 {% if not (settings.logo_position_mobile == 'center' and settings.head_utility == 'icons') %}ml-2{% endif %}{% else %}text-left{% endif %} d-block d-md-none">
+                <a
+                    href="#"
+                    class="js-modal-open utilities-link utilities-item"
+                    data-toggle="#nav-search"
+                    aria-label="{{ 'Buscador' | translate }}"
+                >
+                    <svg class="icon-inline icon-2x icon-w-12"><use xlink:href="#search"/></svg>
+                </a>
             </div>
 
             {# Desktop Search, used on mobile when setting is set to show "big search" #}
-
-            <div class="d-none d-lg-block col-lg-6 text-center">
+            <div class="d-none d-lg-flex col-lg-6 text-center transition-soft">
                 {% snipplet "header/header-search.tpl" %}
             </div>
 
@@ -75,13 +78,6 @@
                     </div>
                 {% endif %}
             </div>
-            {% if settings.logo_position_mobile == 'left' and not settings.head_utility == 'searchbox' %}
-                <div class="col-auto d-md-none order-last">
-                    <a href="#" class="js-modal-open utilities-link utilities-item" data-toggle="#nav-hamburger" aria-label="{{ 'Menú' | translate }}" data-component="menu-button">
-                        <svg class="icon-inline icon-2x icon-w-14"><use xlink:href="#bars"/></svg>
-                    </a>
-                </div>
-            {% endif %}
 		</div>
         {% if settings.head_fix and settings.ajax_cart %}
             <div class="d-md-none">

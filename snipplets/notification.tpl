@@ -7,7 +7,7 @@
                 {{ 'Al navegar por este sitio <strong>aceptás el uso de cookies</strong> para agilizar tu experiencia de compra.' | translate }}
             </div>
             <div class="col-12 col-lg-3 text-center">
-                <a href="#" class="js-notification-close js-acknowledge-cookies btn btn-secondary btn-medium invert" data-amplitude-event-name="cookie_banner_acknowledge_click">
+                <a href="#" class="js-notification-close js-acknowledge-cookies btn btn-secondary btn-medium invert d-inline-flex" data-amplitude-event-name="cookie_banner_acknowledge_click">
                     {{ "Entendido" | translate }}
                 </a>
             </div>
