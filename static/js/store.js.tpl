@@ -633,7 +633,7 @@ $(document).ready(function(){
         if (width > 767) {
             var slider_autoplay = {delay: 6000,};
         } else {
-            var slider_autoplay = false;
+            var slider_autoplay = true;
         }
 
         var preloadImagesValue = false;
@@ -645,9 +645,7 @@ $(document).ready(function(){
             '.js-home-slider', {
                 preloadImages: preloadImagesValue,
                 lazy: lazyValue,
-                {% if settings.slider | length > 1 %}
-                    loop: loopValue,
-                {% endif %}
+                loop: loopValue,
                 autoplay: slider_autoplay,
                 pagination: {
                     el: '.js-swiper-home-pagination',
@@ -667,9 +665,7 @@ $(document).ready(function(){
             '.js-home-slider-mobile', {
                 preloadImages: preloadImagesValue,
                 lazy: lazyValue,
-                {% if settings.slider_mobile | length > 1 %}
-                    loop: loopValue,
-                {% endif %}
+                loop: loopValue,
                 autoplay: slider_autoplay,
                 pagination: {
                     el: '.js-swiper-home-pagination-mobile',
@@ -2314,8 +2310,8 @@ $(document).ready(function(){
 
         var width = window.innerWidth;
         if (width > 767) {
-            var speedVal = 0;
-            var loopVal = false;
+            var speedVal = 300;
+            var loopVal = true;
             var spaceBetweenVal = 0;
             var slidesPerViewVal = 1;
         } else {
@@ -2328,12 +2324,10 @@ $(document).ready(function(){
         createSwiper('.js-swiper-product', {
             lazy: true,
             speed: speedVal,
-            {% if product.images_count > 1 %}
             loop: loopVal,
             slidesPerView: slidesPerViewVal,
             centeredSlides: true,
             spaceBetween: spaceBetweenVal,
-            {% endif %}
             pagination: {
                 el: '.js-swiper-product-pagination',
                 type: 'fraction',

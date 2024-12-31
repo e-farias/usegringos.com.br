@@ -490,7 +490,8 @@ window.tiendaNubeInstaTheme = (function(jQueryNuvem, countryCode) {
 							watchSlideProgress: true,
 							watchSlidesVisibility: true,
 							slideVisibleClass: 'js-swiper-slide-visible',
-							loop: $products.length > 3,
+							// loop: $products.length > 3,
+							loop: true,
 							navigation: {
 								nextEl: `.js-swiper-${setting}-next`,
 								prevEl: `.js-swiper-${setting}-prev`
