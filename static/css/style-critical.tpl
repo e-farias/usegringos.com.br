@@ -334,7 +334,7 @@ body{
   right: 10px;
   z-index: 100;
   color: white;
-  background-color:#4dc247;
+  background-color: #0B0B0B;
   box-shadow: 2px 2px 6px rgba(0,0,0,0.4);
   border-radius: 50%;
 }

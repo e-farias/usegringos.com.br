@@ -3,8 +3,36 @@
 {% set has_auto_height_slider = not settings.slider_viewport_height %}
 {% set use_smaller_thumbs = (has_auto_height_slider and not has_mobile_slider) or has_mobile_slider %}
 
+{# {
+	"image": "https://youtube.com/shorts/LQY-lEuTlR4",
+	"link": "https://usegringos.com.br/perfumes",
+	"title": "Título do Slide 2",
+	"description": "Descrição do Slide 2",
+	"button": "Saiba mais",
+	"media_type": "video",
+}, #}
+{% set slider = [
+	{
+		"image": "images/banners/exemple-1.svg",
+		"link": "https://usegringos.com.br/perfumes",
+		"title": "Título do Slide 1",
+		"description": "Descrição do Slide 1",
+		"button": "Saiba mais",
+		"media_type": "image",
+	},
+	{
+		"image": "images/banners/exemple-2.svg",
+		"link": "https://usegringos.com.br/perfumes",
+		"title": "Título do Slide 2",
+		"description": "Descrição do Slide 2",
+		"button": "Saiba mais",
+		"media_type": "image",
+	},
+] %}
+
+
 {% if not mobile %}
-<div class="js-home-main-slider-container {% if not has_main_slider %}hidden{% endif %}">
+<div class="js-home-main-slider-container " style="margin-top: -1.5rem; background: #0B0B0B;">
 {% endif %}
 	<div class="js-live-preview-home-slider-container {% if mobile %}js-home-mobile-slider{% else %}js-home-main-slider{% endif %}-visibility {% if has_main_slider and has_mobile_slider %}{% if mobile %}d-md-none{% else %}d-none d-md-block{% endif %}{% elseif not settings.toggle_slider_mobile and mobile %}hidden{% endif %} {% if not settings.slider_full %} mt-4{% endif %} mb-4">
 		<div class="container{% if settings.slider_full %}-fluid{% endif %}">
@@ -12,17 +40,17 @@
 				<div class="col js-home-slider-col section-slider{% if settings.slider_full %} p-0{% endif %}{% if has_auto_height_slider %} section-slider-auto{% endif %}">
 					<div class="js-home-slider{% if mobile %}-mobile{% endif %} nube-slider-home swiper-container{% if settings.theme_rounded and not settings.slider_full %} box-rounded{% endif %} js-swiper-roundable-border swiper-container-horizontal">
 						<div class="swiper-wrapper">
-							{% if mobile %}
+							{# {% if mobile %}
 								{% set slider = settings.slider_mobile %}
 							{% else %}
 								{% set slider = settings.slider %}
-							{% endif %}
+							{% endif %} #}
 							{% for slide in slider %}
 								<div class="swiper-slide slide-container">
 									{% if slide.link %}
 										<a href="{{ slide.link | setting_url }}" aria-label="{{ 'Carrusel' | translate }} {{ loop.index }}">
 									{% endif %}	
-									{% set has_text =  slide.title or slide.description or slide.button %}
+									{# {% set has_text =  slide.title or slide.description or slide.button %} #}
 									<div class="slider-slide{% if has_auto_height_slider %} position-relative h-auto{% endif %}">
 
 										{% set apply_lazy_load = not (loop.first and ((has_main_slider and not has_mobile_slider) or (has_mobile_slider and mobile))) %}
@@ -41,7 +69,7 @@
 											class="slider-image {% if apply_lazy_load %}swiper-lazy blur-up-huge{% endif %}{% if has_auto_height_slider %} d-block{% endif %}" alt="{{ 'Carrusel' | translate }} {{ loop.index }}"
 										/>
 
-										{% if has_text %}
+										{# {% if has_text %}
 											<div class="swiper-text swiper-{{ slide.color }}">	
 												{% if slide.description %}
 													<div class="swiper-description {% if has_auto_height_slider and not has_mobile_slider %}font-small font-md-normal mb-md-3 mb-2{% else %}mb-3{% endif %}">{{ slide.description }}</div>
@@ -53,7 +81,7 @@
 													<div class="btn btn-primary btn-small swiper-btn {% if has_auto_height_slider and not has_mobile_slider %} btn-extra-small btn-extra-small-md mt-md-4 mt-2  px-md-4{% else %}mt-4 px-4{% endif %}">{{ slide.button }}</div>
 												{% endif %}
 											</div>
-										{% endif %}
+										{% endif %} #}
 									</div>
 									{% if slide.link %}
 										</a>
