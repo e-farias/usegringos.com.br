@@ -1033,9 +1033,9 @@ p{
 
 {# /* // Nav */ #}
 
-.nav-row {
+{# .nav-row {
   border-top: 1px solid;
-}
+} #}
 
 .nav-desktop {
   width: 100%;

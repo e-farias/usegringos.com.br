@@ -1666,9 +1666,9 @@ input::-webkit-outer-spin-button{
 
 {# /* // Nav */ #}
 
-.nav-row {
-  border-color: rgba($main-background, .2);
-}
+// .nav-row {
+//   border-color: rgba($main-background, .2);
+// }
 
 .desktop-dropdown::-webkit-scrollbar-track {
   background: darken($main-background, 5%);
@@ -1685,10 +1685,10 @@ input::-webkit-outer-spin-button{
 
 
 .head-light{
-  .nav-row {
-    border-color: rgba($primary-color, .2);
-    border-bottom: 1px solid rgba($primary-color, .2);
-  }
+  // .nav-row {
+  //   border-color: rgba($primary-color, .2);
+  //   border-bottom: 1px solid rgba($primary-color, .2);
+  // }
   .desktop-dropdown::-webkit-scrollbar-track {
     background: darken($main-background, 10%);
   }
@@ -1712,9 +1712,9 @@ input::-webkit-outer-spin-button{
 }
 
 .head-dark{
-  .nav-row {
-    border-color: rgba($main-background, .15);
-  }
+  // .nav-row {
+  //   border-color: rgba($main-background, .15);
+  // }
   .desktop-dropdown::-webkit-scrollbar-track {
     background: darken($main-background, 20%);
   }
