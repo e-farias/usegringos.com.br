@@ -6,8 +6,8 @@
                 <div class="search-suggest-image-container col-xs-auto">
                     {{ product.featured_image | product_image_url("tiny") | img_tag(product.featured_image.alt, {class: 'search-suggest-image'}) }}
                 </div>
-                <div class="search-suggest-text col">
-                	<p class="search-suggest-name">
+                <div class="search-suggest-text col font-josefin-sans">
+                	<p class="search-suggest-name font-josefin-sans">
                 		{{ product.name | highlight(query) }}
                 	</p>
                     {% if product.display_price %}

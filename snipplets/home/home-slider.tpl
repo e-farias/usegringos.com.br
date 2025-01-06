@@ -3,14 +3,6 @@
 {% set has_auto_height_slider = not settings.slider_viewport_height %}
 {% set use_smaller_thumbs = (has_auto_height_slider and not has_mobile_slider) or has_mobile_slider %}
 
-{# {
-	"image": "https://youtube.com/shorts/LQY-lEuTlR4",
-	"link": "https://usegringos.com.br/perfumes",
-	"title": "Título do Slide 2",
-	"description": "Descrição do Slide 2",
-	"button": "Saiba mais",
-	"media_type": "video",
-}, #}
 {% set slider = [
 	{
 		"image": "images/banners/exemple-1.svg",
@@ -32,7 +24,7 @@
 
 
 {% if not mobile %}
-<div class="js-home-main-slider-container " style="margin-top: -1.5rem; background: #0B0B0B;">
+<div class="js-home-main-slider-container bg-primary" style="margin-top: -1.5rem;">
 {% endif %}
 	<div class="js-live-preview-home-slider-container {% if mobile %}js-home-mobile-slider{% else %}js-home-main-slider{% endif %}-visibility {% if has_main_slider and has_mobile_slider %}{% if mobile %}d-md-none{% else %}d-none d-md-block{% endif %}{% elseif not settings.toggle_slider_mobile and mobile %}hidden{% endif %} {% if not settings.slider_full %} mt-4{% endif %} mb-4">
 		<div class="container{% if settings.slider_full %}-fluid{% endif %}">

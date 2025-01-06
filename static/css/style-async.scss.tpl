@@ -1120,7 +1120,7 @@ button{
   {% if settings.icons_size_desktop == 'small' %}
     top: 45px;
   {% else %}
-    top: 65px;
+    top: 45px;
   {% endif %}
   left: 50%;
   padding: 10px;
@@ -1827,4 +1827,82 @@ body.compensate-for-scrollbar{overflow:hidden}.fancybox-active{height:auto}.fanc
 }
 .display-when-content-ready{
   display: block!important;
+}
+
+// #Custom elements
+.border-transparent {
+  border: 1px solid rgb(255 255 255 / 15%);
+}
+
+#categories-short a {
+
+  height: 75dvh;
+  border-radius: 1.25rem;
+  overflow: hidden;
+
+  img {
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+    z-index: 2;
+  }
+
+  .content {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    height: fit-content;
+    width: fit-content;
+    top: 50%;
+    right: 18%;
+    left: auto;
+    z-index: 3;
+    
+    @media (max-width: 992px) {
+      top: 80%;
+      left: 50%;
+    }
+  }
+
+  .video-container {
+    display: flex;
+    position: absolute;
+    text-align: center;
+    z-index: 4;
+    transform: translate(-50%, -50%);
+    width: 30%;
+    height: 85%;
+    pointer-events: none;
+    top: 50%;
+    left: 30%;
+
+    @media (max-width: 992px) {
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+
+    iframe, video {
+      width: 100%;
+      height: 100%;
+      border: none;
+      border-radius: 1rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      margin: auto;
+      object-fit: cover;
+    }
+  }
+}
+
+#categories-short a#perfumes {
+  .content {
+    right: auto;
+    left: 30%;
+
+    @media (max-width: 992px) {
+      top: 80%;
+      left: 50%;
+    }
+  }
 }

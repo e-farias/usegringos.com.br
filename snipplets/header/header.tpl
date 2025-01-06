@@ -17,7 +17,7 @@
     {% set has_ad_bar = settings.ad_bar and settings.ad_text %}
     {% set show_topbar =  has_ad_bar or has_social_network or has_languages %}
     {% if show_topbar %}
-        <section class="js-topbar section-topbar {% if not has_ad_bar %}d-none d-md-block{% endif %}">
+        <section class="js-topbar section-topbar {% if not has_ad_bar %}d-none d-lg-block{% endif %}">
             <div class="container-fluid">
                 <div class="row justify-content-center text-primary py-1">
                     <strong>FRETE GRÁTIS</strong>   
@@ -33,7 +33,7 @@
             {# Menu icon for all mobile combinations except when categories are exposed and logo is centered #}
             <!-- {% if settings.head_utility == 'searchbox' or settings.head_utility == 'icons' or (settings.logo_position_mobile == 'left' and settings.head_utility == 'categories') %}
             {% endif %} -->
-            <div class="col-auto {% if settings.logo_position_mobile == 'left' %}order-last ml-2{% else %}text-left{% endif %} d-block d-md-none">
+            <div class="col-auto {% if settings.logo_position_mobile == 'left' %}order-last ml-2{% else %}text-left{% endif %} d-block d-lg-none">
                 <a href="#" class="js-modal-open utilities-link utilities-item" data-toggle="#nav-hamburger" aria-label="{{ 'Menú' | translate }}" data-component="menu-button">
                     <svg class="icon-inline icon-2x icon-w-12"><use xlink:href="#bars"/></svg>
                 </a>
@@ -44,69 +44,51 @@
             </div>
 
             {# Logo for mobile and desktop #}
-			<div class="{% if settings.logo_position_desktop == 'center' %}{% if settings.icons_size_desktop == 'big' %}col-md-6 col-lg-6{% else %}col-md-4 col-lg-4{% endif %}{% else %}col-md-3 col-lg-3{% endif %} {% if settings.logo_position_mobile == 'left' %}col text-left{% else %}col text-center{% endif %} {% if settings.logo_position_desktop == 'center' %}text-md-center {% if settings.icons_size_desktop == 'small' %}offset-md-1{% endif %} order-md-2{% else %}text-md-left{% endif %}">
+			<div class="{% if settings.logo_position_desktop == 'center' %}{% if settings.icons_size_desktop == 'big' %}col-lg-6{% else %}col-lg-4{% endif %}{% else %}col-lg-2{% endif %} {% if settings.logo_position_mobile == 'left' %} text-left{% else %}col text-center{% endif %} {% if settings.logo_position_desktop == 'center' %}text-lg-center {% if settings.icons_size_desktop == 'small' %}offset-lg-1{% endif %} order-lg-2{% else %}text-lg-left{% endif %}">
                 {% set logo_size_class = settings.logo_size == 'small' ? 'logo-img-small' : settings.logo_size == 'big' ? 'logo-img-big' %}
-                {{ component('logos/logo', {logo_img_classes: 'transition-soft pl-4 ' ~ logo_size_class, logo_text_classes: 'h5 h3-md mb-0'}) }}
+                {{ component('logos/logo', {logo_img_classes: 'transition-soft pl-4 pl-lg-0 ' ~ logo_size_class, logo_text_classes: 'h5 h3-lg mb-0'}) }}
             </div>
 
             {# Search icon used for mobile when categories are exposed #}
             {# {% if settings.head_utility == 'categories' or (settings.head_utility == 'categories' and settings.logo_position_mobile == 'left') or settings.head_utility == 'icons' %}
             {% endif %} #}
-            <div class="col-auto {% if settings.logo_position_mobile == 'left' or (settings.logo_position_mobile == 'center' and settings.head_utility == 'icons') %}order-2 {% if not (settings.logo_position_mobile == 'center' and settings.head_utility == 'icons') %}ml-2{% endif %}{% else %}text-left{% endif %} d-block d-md-none">
+            <div class="col-auto {% if settings.logo_position_mobile == 'left' or (settings.logo_position_mobile == 'center' and settings.head_utility == 'icons') %}order-2 {% if not (settings.logo_position_mobile == 'center' and settings.head_utility == 'icons') %}ml-2{% endif %}{% else %}text-left{% endif %} d-block d-lg-none">
                 <a
                     href="#"
                     class="js-modal-open utilities-link utilities-item"
                     data-toggle="#nav-search"
                     aria-label="{{ 'Buscador' | translate }}"
                 >
-                    <svg class="icon-inline icon-2x icon-w-12"><use xlink:href="#search"/></svg>
+                    <svg class="icon-inline icon-2x icon-w-14"><use xlink:href="#search"/></svg>
                 </a>
             </div>
 
             {# Desktop Search, used on mobile when setting is set to show "big search" #}
-            <div class="d-none d-lg-flex col-lg-6 text-center transition-soft">
+            {# <div class="d-none d-lg-flex col-lg-6 text-center transition-soft">
                 {% snipplet "header/header-search.tpl" %}
-            </div>
+            </div> #}
 
             {# Utility icons: Help, Account and Cart (also used on mobile) #}
+            
+            <div class="d-none d-lg-block col-8 p-0">
+                {% snipplet "navigation/navigation-categories.tpl" %}
+                {# {% snipplet "navigation/navigation.tpl" %} #}
+            </div>
 
-			<div class="col-auto {% if settings.logo_position_mobile == 'left' %}order-3{% elseif settings.logo_position_mobile == 'center' and settings.head_utility == 'icons' %}order-last{% endif %} {% if settings.icons_size_desktop == 'small' %}col-md-4 col-lg-4{% else %}col-md-3 col-lg-3{% endif %} text-right {% if settings.logo_position_desktop == 'center' %}order-md-3{% endif %}">
+			<div class="col-auto col-lg-2 text-right">
                 {% snipplet "header/header-utilities.tpl" %}
                 {% if settings.head_fix and settings.ajax_cart %}
-                    <div class="d-none d-md-block">
+                    <div class="d-none d-lg-block">
                         {% include "snipplets/notification.tpl" with {add_to_cart: true} %}
                     </div>
                 {% endif %}
             </div>
 		</div>
         {% if settings.head_fix and settings.ajax_cart %}
-            <div class="d-md-none">
+            <div class="d-lg-none">
                 {% include "snipplets/notification.tpl" with {add_to_cart: true, add_to_cart_mobile: true} %}
             </div>
         {% endif %}
-
-        {# Mobile row for exposed categories #}
-        <div class="row align-items-center nav-row {% if settings.head_utility == 'searchbox' %}d-none d-md-block{% endif %}">
-            {% if settings.head_utility == 'categories' %}
-
-                {# Menu icon inline with categories when when categories are exposed and logo is centered #}
-                {% if settings.logo_position_mobile == 'center' %}
-                    <div class="col-2 d-block d-md-none p-0 text-center">
-                        <a href="#" class="js-modal-open utilities-link utilities-item" data-toggle="#nav-hamburger" aria-label="{{ 'Menú' | translate }}" data-component="menu-button">
-                            <svg class="icon-inline icon-2x icon-w-14"><use xlink:href="#bars"/></svg>
-                        </a>
-                        {% if store.country == 'AR'%}
-                            {# Notification icon for quick login on AR stores#}
-                            <div class="js-quick-login-badge badge badge-overlap swing" style="display: none;"></div>
-                        {% endif %}
-                    </div>
-                {% endif %}
-                <div class="col-{% if settings.logo_position_mobile == 'left' %}12{% else %}10{% endif %} nav-categories-container d-block d-md-none p-0">
-                    {% snipplet "navigation/navigation-categories.tpl" %}
-                </div>
-            {% endif %}
-            <div class="col text-center p-0 d-none d-md-block">{% snipplet "navigation/navigation.tpl" %}</div>
-        </div>
 
 	</div>    
     {% include "snipplets/notification.tpl" with {order_notification: true} %}
@@ -162,7 +144,7 @@
 
 {# Modal Search #}
 
-{% embed "snipplets/modal.tpl" with{modal_id: 'nav-search',modal_class: 'nav-search', modal_position: 'left', modal_transition: 'slide', modal_width: 'docked-md', modal_header: true } %}
+{% embed "snipplets/modal.tpl" with{modal_id: 'nav-search',modal_class: 'nav-search', modal_position: 'left', modal_transition: 'slide', modal_width: 'docked-lg', modal_header: true } %}
     {% block modal_head %}
             {% block page_header_text %}{{ "Buscar" | translate }}{% endblock page_header_text %}
     {% endblock %}
@@ -175,7 +157,7 @@
 
     {# Cart Ajax #}
 
-    {% embed "snipplets/modal.tpl" with{modal_id: 'modal-cart', modal_position: 'right', modal_transition: 'slide', modal_width: 'docked-md', modal_form_action: store.cart_url, modal_form_class: 'js-ajax-cart-panel', modal_header: true, modal_mobile_full_screen: true, modal_form_hook: 'cart-form', data_component:'cart' } %}
+    {% embed "snipplets/modal.tpl" with{modal_id: 'modal-cart', modal_position: 'right', modal_transition: 'slide', modal_width: 'docked-lg', modal_form_action: store.cart_url, modal_form_class: 'js-ajax-cart-panel', modal_header: true, modal_mobile_full_screen: true, modal_form_hook: 'cart-form', data_component:'cart' } %}
         {% block modal_head %}
             {% block page_header_text %}{{ "Carrito de Compras" | translate }}{% endblock page_header_text %}
         {% endblock %}
@@ -190,7 +172,7 @@
 
     {# Recommended products on add to cart #}
 
-    {% embed "snipplets/modal.tpl" with{modal_id: 'related-products-notification', modal_class: 'bottom modal-overflow-none modal-bottom-sheet h-auto', modal_header: true, modal_header_class: 'modal-header-light px-0 pt-0 mb-2 m-0 w-100', modal_position: 'bottom', modal_transition: 'slide', modal_footer: false, modal_width: 'centered-md modal-centered-md-600px m-0 p-3', modal_close_class: 'float-right mr-0'} %}
+    {% embed "snipplets/modal.tpl" with{modal_id: 'related-products-notification', modal_class: 'bottom modal-overflow-none modal-bottom-sheet h-auto', modal_header: true, modal_header_class: 'modal-header-light px-0 pt-0 mb-2 m-0 w-100', modal_position: 'bottom', modal_transition: 'slide', modal_footer: false, modal_width: 'centered-lg modal-centered-lg-600px m-0 p-3', modal_close_class: 'float-right mr-0'} %}
         {% block modal_head %}
             {{ '¡Agregado al carrito!' | translate }}
         {% endblock %}

@@ -17,7 +17,7 @@
         <link rel="shortcut icon" href="{{ 'favicon/favicon.ico' | static_url }}" />
         <link rel="apple-touch-icon" sizes="180x180" href="{{ 'favicon/apple-touch-icon.png' | static_url }}" />
         <meta name="apple-mobile-web-app-title" content="Gringos" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="0B0B0B">
+        <meta name="apple-mobile-web-app-status-bar-style" content="000000">
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">

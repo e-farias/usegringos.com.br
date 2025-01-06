@@ -21,45 +21,96 @@
         {% include 'snipplets/home/home-featured-products.tpl' with {'has_featured': true} %}
     {% endif %}
 
-{% elseif section_select == 'informatives' %}
+{# {% elseif section_select == 'informatives' %} #}
 
     {#  **** Informative banners ****  #}
-    <section data-store="banner-services">
+    {# <section data-store="banner-services">
         {% if show_help or (show_component_help and not has_informative_banners) %}
             {% snipplet 'defaults/home/informative_banners_help.tpl' %}
         {% else %}
             {% include 'snipplets/banner-services/banner-services.tpl' %}
         {% endif %}
-    </section>
+    </section> #}
 
 {% elseif section_select == 'categories' %}
 
     {#  **** Categories banners ****  #}
-    <section class="section-banners-home" data-store="home-banner-categories">
-        {% if show_help or (show_component_help and not has_category_banners) %}
+    <section id="categories-short" class="section-banners-home bg-primary p-4 py-8 font-josefin-sans" data-store="home-banner-categories" style="margin-top: -1.5rem; margin-bottom: 0;">
+        {# {% if show_help or (show_component_help and not has_category_banners) %}
             {% snipplet 'defaults/home/category_banners_help.tpl' %}
         {% else %}
             {% include 'snipplets/home/home-banners.tpl' %}
-        {% endif %}
+        {% endif %} #}
+        <div class="row justify-content-center m-0 mx-auto" style="gap: 1.5rem;">
+            
+            <a id="roupas" href="/roupas" class="d-block col-12 p-0 position-relative border-transparent">
+                <div class="video-container">
+                    <video class="border-transparent" autoplay loop muted>
+                        <source
+                            src="{{ "videos/criativo1.mp4" | static_url }}"
+                            type="video/mp4"
+                        >
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <img
+                    src="{{ "images/overlay_dark.webp" | static_url }}"
+                    class="d-block d-lg-none w-100"
+                />
+                <img
+                    src="{{ "images/roupas_web.webp" | static_url }}"
+                    class="d-none d-lg-block w-100"
+                />
+                <div class="content">
+                    <h1 class="w-100 text-white text-center mb-2 font-josefin-sans" style="font-weight: 500;font-size: 42px;">Roupas</h1>
+                    <div class="w-100 text-white text-center d-flex justify-content-center align-items-center">
+                        <span style="font-weight: 300;font-size: 18px;">ver mais</span>
+                        <svg class="icon-inline icon-2x icon-w-4 mx-2">
+                            {% include "snipplets/svg/arrow.tpl" %}
+                        </svg>
+                    </div>
+                </div>
+            </a>
+
+            <a id="perfumes" href="/perfumes" class="d-block col-12 p-0 position-relative border-transparent">
+                <img
+                    src="{{ "images/perfumes_mobile.webp" | static_url }}"
+                    class="d-block d-lg-none w-100"
+                />
+                <img
+                    src="{{ "images/perfumes_web.webp" | static_url }}"
+                    class="d-none d-lg-block w-100"
+                />
+                <div class="content">
+                    <h1 class="w-100 text-white text-center mb-2 font-josefin-sans" style="font-weight: 500;font-size: 42px;">Perfumes</h1>
+                    <div class="w-100 text-white text-center d-flex justify-content-center align-items-center">
+                        <span style="font-weight: 300;font-size: 18px;">ver mais</span>
+                        <svg class="icon-inline icon-2x icon-w-4 mx-2">
+                            {% include "snipplets/svg/arrow.tpl" %}
+                        </svg>
+                    </div>
+                </div>
+            </a>
+        </div>
     </section>
 
-{% elseif section_select == 'welcome' %}
+{# {% elseif section_select == 'welcome' %} #}
 
     {#  **** Welcome message ****  #}
-    {% if show_help or (show_component_help and not has_welcome) %}
+    {# {% if show_help or (show_component_help and not has_welcome) %}
         {% snipplet 'defaults/home/welcome_help.tpl' %}
     {% else %}
         {% include 'snipplets/home/home-welcome-message.tpl' %}
-    {% endif %}
+    {% endif %} #}
 
-{% elseif section_select == 'brands' %}
+{# {% elseif section_select == 'brands' %} #}
 
     {#  **** Brands ****  #}
-    {% if show_help or (show_component_help and not has_brands) %}
+    {# {% if show_help or (show_component_help and not has_brands) %}
         {% snipplet 'defaults/home/brands_help.tpl' %}
     {% else %}
-        {% include 'snipplets/home/home-brands.tpl' %}
-    {% endif %}
+    {% endif %} #}
+    {% include 'snipplets/home/home-brands.tpl' %}
 
 {% elseif section_select == 'new' %}
 

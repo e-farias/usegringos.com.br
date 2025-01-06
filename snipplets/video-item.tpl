@@ -18,7 +18,7 @@
 
 					{# Open modal in mobile with product video inside #}
 
-					<a href="#product-video-modal" data-fancybox="product-gallery" class="js-play-button video-player d-block d-md-none">
+					<a href="#product-video-modal" data-fancybox="product-gallery" class="js-play-button video-player d-block d-lg-none">
 						<div class="video-player-icon">
 							<svg class="icon-inline icon-xs svg-icon-invert {{ svg_size }}"><use xlink:href="#play"/></svg>
 						</div>

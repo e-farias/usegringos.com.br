@@ -8,8 +8,8 @@ Clothing
 	accent_color = #35B69F
 	footer_background_color = #46459B
 	footer_foreground_color = #ffffff
-	font_headings = "Montserrat",Sans-serif
-	font_rest = "Montserrat",Sans-serif
+	font_headings = "Josefin Sans",Sans-serif
+	font_rest = "Josefin Sans",Sans-serif
 	theme_rounded = 0
 	icons_solid = 0
 	head_background = primary

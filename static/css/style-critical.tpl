@@ -334,7 +334,7 @@ body{
   right: 10px;
   z-index: 100;
   color: white;
-  background-color: #0B0B0B;
+  background-color: #000000;
   box-shadow: 2px 2px 6px rgba(0,0,0,0.4);
   border-radius: 50%;
 }
@@ -594,7 +594,7 @@ p{
 {# /* // Sliders */ #}
 
 .section-slider {
-  height: 60vh;
+  height: 75dvh;
 }
 .section-slider-auto {
   height: auto;
@@ -1054,8 +1054,8 @@ p{
 }
 .nav-list-link {
   padding: 0 5px;
-  font-weight: 500;
-  font-size: 14px;
+  font-weight: 400;
+  font-size: 18px;
   line-height: 50px;
   letter-spacing: 1px;
 }
@@ -1070,7 +1070,7 @@ p{
 }
 
 .nav-categories {
-  overflow-x: scroll;
+  overflow-x: auto;
 }
 .nav-list-mobile-categories {
   margin: 4px 0;
@@ -1783,8 +1783,8 @@ p{
     margin-right: -10px;
   }
   .utilities-item {
-    width: 32%;
-    padding: 15px 0;
+    {# width: 32%; #}
+    padding: 10px;
   }
 
   {# /* //// Product grid */ #}

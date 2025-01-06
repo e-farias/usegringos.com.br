@@ -27,7 +27,8 @@
 
 		{% if section_select not in newArray %}
 
-			{% include 'snipplets/home/home-section-switch.tpl' %}
+			{# {% include 'snipplets/home/home-section-switch.tpl' %} #}
+			{% include 'snipplets/home/home-section-switch.tpl' with {'mobile': mobile} %}
 			{% set newArray = newArray|merge([section_select]) %}
 
 		{% endif %}

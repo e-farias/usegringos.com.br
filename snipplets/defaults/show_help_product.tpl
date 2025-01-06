@@ -40,7 +40,7 @@
                                     </a>
                                  </div>
                             </div>
-                            <div class="js-swiper-product-pagination swiper-pagination swiper-pagination-white h5 font-weight-normal d-block d-md-none"></div>
+                            <div class="js-swiper-product-pagination swiper-pagination swiper-pagination-white h5 font-weight-normal d-block d-lg-none"></div>
                         </div>
                     </div>
                 </div>
