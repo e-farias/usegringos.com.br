@@ -830,20 +830,18 @@ DOMContentLoaded.addEventOrExecute(() => {
 
         createSwiper('.js-swiper-brands', {
             lazy: true,
-            {% if settings.brands | length > 4 %}
-                loop: true,
-            {% endif %}
+            loop: true,
             watchOverflow: true,
             centerInsufficientSlides: true,
-            spaceBetween: 30,
+            spaceBetween: 5,
             slidesPerView: 1.5,
             navigation: {
-                nextEl: '.js-swiper-brands-next',
-                prevEl: '.js-swiper-brands-prev',
+                nextEl: '.d-none',
+                prevEl: '.d-none',
             },
             breakpoints: {
-                640: {
-                    slidesPerView: 5,
+                768: {
+                    slidesPerView: 4.5,
                 }
             }
         },function(swiperInstance) {
@@ -2619,15 +2617,15 @@ DOMContentLoaded.addEventOrExecute(() => {
             loop: true,
             watchOverflow: true,
             centerInsufficientSlides: true,
-            spaceBetween: 30,
+            spaceBetween: 5,
             slidesPerView: 1.5,
             navigation: {
                 nextEl: '.js-swiper-brands-next',
                 prevEl: '.js-swiper-brands-prev',
             },
             breakpoints: {
-                640: {
-                    slidesPerView: 5,
+                768: {
+                    slidesPerView: 4.5,
                 }
             }
         });

@@ -812,19 +812,17 @@ $(document).ready(function(){
 
         createSwiper('.js-swiper-brands', {
             lazy: true,
-            {% if settings.brands | length > 4 %}
-                loop: true,
-            {% endif %}
+            loop: true,
             watchOverflow: true,
             centerInsufficientSlides: true,
-            spaceBetween: 30,
+            spaceBetween: 5,
             slidesPerView: 1.5,
             navigation: {
                 nextEl: '.js-swiper-brands-next',
                 prevEl: '.js-swiper-brands-prev',
             },
             breakpoints: {
-                640: {
+                768: {
                     slidesPerView: 5,
                 }
             }
@@ -2265,14 +2263,14 @@ $(document).ready(function(){
             loop: true,
             watchOverflow: true,
             centerInsufficientSlides: true,
-            spaceBetween: 30,
+            spaceBetween: 5,
             slidesPerView: 1.5,
             navigation: {
                 nextEl: '.js-swiper-brands-next',
                 prevEl: '.js-swiper-brands-prev',
             },
             breakpoints: {
-                640: {
+                768: {
                     slidesPerView: 5,
                 }
             }

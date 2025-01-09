@@ -1352,9 +1352,10 @@ footer {
 
 .section-brands-home {
   position: relative;
-  padding: 50px 0;
+  // padding: 50px 0;
   text-align: center;
-  line-height: 100px;
+  // line-height: 100px;
+  overflow: hidden;
 }
 
 .brand-image {
@@ -1906,3 +1907,66 @@ body.compensate-for-scrollbar{overflow:hidden}.fancybox-active{height:auto}.fanc
     }
   }
 }
+
+.section-brands-home {
+  .slide-container {
+    justify-content: center;
+    align-items: center;
+
+    img {
+      max-height: 20px;
+    }
+  }
+}
+
+.brands-swiper {
+  display: flex;
+  overflow: hidden;
+  padding: 20px 0;
+  
+  .brands-swiper-wrapper {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .slide {
+    // flex: 0 0 40%; /* Default for mobile (2.5 items visible) */
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    margin: 0 2rem;
+
+    img {
+      max-height: 20px;
+      display: flex;
+      margin: 0 auto;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .slide {
+      flex: 0 0 22%; /* For desktop (4.5 items visible) */
+    }
+  }
+  
+  /* Infinite Loop Animation */
+  @keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  .brands-swiper-wrapper {
+    animation: slide 40s linear infinite;
+  }
+  
+  .slide:last-child {
+    margin-right: 0;
+  }
+}
+
