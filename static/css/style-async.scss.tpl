@@ -1936,7 +1936,11 @@ body.compensate-for-scrollbar{overflow:hidden}.fancybox-active{height:auto}.fanc
     justify-content: center;
     align-items: center;
     font-size: 20px;
-    margin: 0 2rem;
+    margin: 0 1rem;
+
+    @media (min-width: 768px) {
+      margin: 0 2rem;
+    }
 
     img {
       max-height: 20px;
@@ -1962,7 +1966,11 @@ body.compensate-for-scrollbar{overflow:hidden}.fancybox-active{height:auto}.fanc
   }
   
   .brands-swiper-wrapper {
-    animation: slide 40s linear infinite;
+    animation: slide 20s linear infinite;
+
+    @media (min-width: 768px) {
+      animation: slide 40s linear infinite;
+    }
   }
   
   .slide:last-child {

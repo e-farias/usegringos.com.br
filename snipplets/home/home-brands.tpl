@@ -46,25 +46,6 @@
 					{% endfor %}
 				</div>
 			</div>
-			{# <div class="brands-swiper">
-				<div class="brands-swiper-wrapper">
-					<div class="slide">Item 1</div>
-					<div class="slide">Item 2</div>
-					<div class="slide">Item 3</div>
-					<div class="slide">Item 4</div>
-					<div class="slide">Item 5</div>
-					<div class="slide">Item 6</div>
-					<div class="slide">Item 7</div>
-					<!-- Duplicate slides for infinite effect -->
-					<div class="slide">Item 1</div>
-					<div class="slide">Item 2</div>
-					<div class="slide">Item 3</div>
-					<div class="slide">Item 4</div>
-					<div class="slide">Item 5</div>
-					<div class="slide">Item 6</div>
-					<div class="slide">Item 7</div>
-				</div>
-			</div> #}
 		</div>
 	</div>
 	{# <div
