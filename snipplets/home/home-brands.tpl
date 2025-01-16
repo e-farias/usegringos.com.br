@@ -16,7 +16,7 @@
 	},
 ] %}
 
-<section class="section-brands-home py-8" data-store="home-brands">
+<section class="section-brands-home mb-0" data-store="home-brands">
 	<div class="row">
 		<div class="col p-0">
 			{# <div class="js-swiper-brands swiper-container">

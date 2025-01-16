@@ -112,7 +112,7 @@
     {% endif %} #}
     {% include 'snipplets/home/home-brands.tpl' %}
 
-{% elseif section_select == 'new' %}
+    {% include 'snipplets/home/home-category-pills.tpl' %}
 
     {#  **** New products ****  #}
     {% if show_help or (show_component_help and not has_products) %}
@@ -150,7 +150,7 @@
         {% include 'snipplets/home/home-instafeed.tpl' %}
     {% endif %}
 
-{% elseif section_select == 'promotional' %}
+{# {% elseif section_select == 'promotional' %} #}
 
     {#  **** Promotional banners ****  #}
     <section class="section-banners-home" data-store="home-banner-promotional">

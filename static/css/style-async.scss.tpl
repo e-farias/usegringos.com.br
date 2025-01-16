@@ -1273,7 +1273,8 @@ footer {
 .section-featured-home,
 .section-brands-home,
 .section-newsletter-home,
-.section-instafeed-home {
+.section-instafeed-home,
+.section-category-pills {
   @extend %section-margin;
 }
 
@@ -1975,6 +1976,33 @@ body.compensate-for-scrollbar{overflow:hidden}.fancybox-active{height:auto}.fanc
   
   .slide:last-child {
     margin-right: 0;
+  }
+}
+
+.section-category-pills {
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  justify-content: start;
+
+  @media (min-width: 768px) {
+    justify-content: center;
+  }
+
+  .category-pill {
+    background-color: #F5F5F5;
+    
+    padding: .75rem 2rem;
+    border-radius: .75rem;
+    display: inline-block;
+    flex: 0 0 auto;
+    margin-right: 1.5rem;
+    text-align: center;
+    color: #444444;
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
   }
 }
 

@@ -1270,7 +1270,7 @@ input::-webkit-outer-spin-button{
 
 .section-brands-home {
   @extend %element-margin;
-  background: rgba($main-foreground, .1);
+  background:  #F5F5F5;
 }
 
 
