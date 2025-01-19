@@ -1,4 +1,4 @@
-<section class="section-category-pills p-4 mb-5" data-store="category-pills">
+<section class="section-category-pills p-4 mb-3" data-store="category-pills">
 	<a href="https://usegringos.com.br/roupas" class="category-pill">
 		Roupas
 	</a>

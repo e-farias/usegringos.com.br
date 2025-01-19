@@ -42,10 +42,10 @@
 {% endif %}
 
 <div class="container">
-    <div class="row js-products-{{ highlighted_products_setting_name }}-container" data-format="{{ section_format }}" data-desktop-columns="{% if settings.grid_columns == 2 %}4{% else %}3{% endif %}">
+    <div class="section-home-most-sale row js-products-{{ highlighted_products_setting_name }}-container" data-format="{{ section_format }}" data-desktop-columns="{% if settings.grid_columns == 2 %}4{% else %}3{% endif %}">
         
-        <div class="col-12 text-center">
-            <h2 class="h1 js-products-{{ highlighted_products_setting_name }}-title {% if settings.theme_rounded %}text-primary{% endif %}" {% if not section_title %}style="display: none"{% endif %}>{{ section_title }}</h2>
+        <div class="col-12 title">
+            <h2 class="font-josefin-sans js-products-{{ highlighted_products_setting_name }}-title {% if settings.theme_rounded %}text-primary{% endif %}" {% if not section_title %}style="display: none"{% endif %}>{{ section_title }}</h2>
         </div>
 
         {% if use_slider %}

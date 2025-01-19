@@ -719,7 +719,7 @@ DOMContentLoaded.addEventOrExecute(() => {
             var watchOverflowVal = true;
             var centerInsufficientSlidesVal = true;
             var slidesPerViewDesktopVal = {% if columns == 2 %}4{% else %}3{% endif %};
-            var slidesPerViewMobileVal = 1.5;
+            var slidesPerViewMobileVal = 1.2;
 
             {% if has_featured_products_slider %}
 

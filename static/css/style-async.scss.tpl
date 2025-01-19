@@ -2006,3 +2006,57 @@ body.compensate-for-scrollbar{overflow:hidden}.fancybox-active{height:auto}.fanc
   }
 }
 
+.section-home-most-sale {
+  color: #0B0B0B;
+
+  .title {
+    text-align: left;
+
+    @media (min-width: 768px) {
+      h2 {
+        font-size: 34px;
+      }
+    }
+
+    h2 {
+      font-size: 24px;
+      color: #0B0B0B;
+      font-weight: 500;
+    }
+  }
+
+  .item-name {
+    color: #0B0B0B;
+    font-weight: 300;
+  }
+  .item-price {
+    color: #0B0B0B;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .price-compare {
+    color: #0B0B0B;
+  }
+  .item-rounded {
+    border: none;
+  }
+  .item-actions {
+    display: none;
+  }
+  .item-description {
+    border-top: none;
+  }
+  .item-image {
+    border: 1px solid rgba(0,0,0,.1);
+    border-radius: 1rem;
+  }
+  .swiper-slide {
+    // min-width: 80dvw;
+    padding: .5rem !important;
+    
+    @media (min-width: 768px) {
+      // min-width: auto;
+      padding: 1rem !important;
+    }
+  }
+}

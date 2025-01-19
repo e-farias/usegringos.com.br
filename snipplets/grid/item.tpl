@@ -86,7 +86,7 @@
         </div>
         <div class="item-description {% if reduced_item %}py-3{% else %}py-4{% endif %}{% if settings.theme_rounded %} px-3{% else %} px-1{% endif %}" data-store="product-item-info-{{ product.id }}">
             <a href="{{ product_url_with_selected_variant }}" title="{{ product.name }}" aria-label="{{ product.name }}" class="item-link">
-                <div class="js-item-name item-name {% if reduced_item %}mb-2{% else %}mb-3{% endif %}" data-store="product-item-name-{{ product.id }}">{{ product.name }}</div>
+                <div class="js-item-name item-name mb-1" data-store="product-item-name-{{ product.id }}">{{ product.name }}</div>
                 {% if product.display_price %}
                     <div class="item-price-container mb-1" data-store="product-item-price-{{ product.id }}">
                         {% if not reduced_item %}
