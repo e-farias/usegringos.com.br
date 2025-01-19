@@ -59,7 +59,9 @@
                     data-toggle="#nav-search"
                     aria-label="{{ 'Buscador' | translate }}"
                 >
-                    <svg class="icon-inline icon-2x icon-w-14"><use xlink:href="#search"/></svg>
+                    <svg class="icon-inline icon-2x icon-w-14">
+                        {% include "snipplets/svg/search.tpl" %}
+                    </svg>
                 </a>
             </div>
 

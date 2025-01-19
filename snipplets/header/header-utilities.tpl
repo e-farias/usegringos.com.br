@@ -6,7 +6,7 @@
 	{% set attention_head = store.whatsapp or store.phone or store.email %}
 	
 	{# Search #}
-	<div class="d-none d-lg-inline-block {% if settings.icons_size_desktop == 'small' %}w-md-auto ml-md-4{% endif %}">
+	<div class="d-none d-lg-inline-block {% if settings.icons_size_desktop == 'small' %}w-lg-auto ml-lg-4{% endif %}">
 		<div class="transition-soft utility-head text-center">
 			<a
 					href="#"
@@ -14,7 +14,9 @@
 					data-toggle="#nav-search"
 					aria-label="{{ 'Buscador' | translate }}"
 			>
-					<svg class="icon-inline icon-2x icon-w-14"><use xlink:href="#search"/></svg>
+					<svg class="icon-inline icon-2x icon-w-14">
+						{% include "snipplets/svg/search.tpl" %}
+					</svg>
 			</a>
 		</div>
 	</div>
@@ -30,10 +32,12 @@
 	
 	{% if attention_head %}
 		
-		<div class="js-utilities-item nav-dropdown utilities-item transition-soft d-none d-md-inline-block {% if settings.icons_size_desktop == 'small' %}w-md-auto ml-md-4{% endif %}">
+		<div class="js-utilities-item nav-dropdown utilities-item transition-soft d-none d-lg-inline-block {% if settings.icons_size_desktop == 'small' %}w-lg-auto ml-lg-4{% endif %}">
 			<div class="utility-head text-center">
-				<svg class="icon-inline icon-2x icon-w-14 {{ icon_desktop_class }}"><use xlink:href="#chat"/></svg>
-				{# <span class="utility-name transition-soft d-block{% if settings.icons_solid %} font-weight-bold{% endif %} {% if settings.icons_size_desktop == 'small' %}d-md-inline-block pt-0 ml-1{% endif %}">{{ 'Ayuda' | translate }}</span> #}
+				<svg class="icon-inline icon-2x icon-w-14 {{ icon_desktop_class }}">
+					{% include "snipplets/svg/chat.tpl" %}
+				</svg>
+				{# <span class="utility-name transition-soft d-block{% if settings.icons_solid %} font-weight-bold{% endif %} {% if settings.icons_size_desktop == 'small' %}d-lg-inline-block pt-0 ml-1{% endif %}">{{ 'Ayuda' | translate }}</span> #}
 			</div>
 			<ul class="js-subutility-list nav-dropdown-content subutility-list">
 				{% if store.whatsapp %}
@@ -60,21 +64,23 @@
 		</div>
 	{% endif %}
 
-	<div class="nav-dropdown utilities-item transition-soft d-none d-md-inline-block {% if settings.icons_size_desktop == 'small' %}w-md-auto ml-md-4{% endif %}" data-store="account-links">
+	<div class="nav-dropdown utilities-item transition-soft d-none d-lg-inline-block {% if settings.icons_size_desktop == 'small' %}w-lg-auto ml-lg-4{% endif %}" data-store="account-links">
 		{% if store.country == 'AR'%}
 			{# Tooltip for quick login on AR stores #}
 			{% include "snipplets/tooltip-login.tpl" with {desktop: "true"} %}
 		{% endif %}
 		<div class="js-utilities-item">
 			<div class="utility-head text-center">
-				<svg class="icon-inline icon-2x icon-w-14 {{ icon_desktop_class }}"><use xlink:href="#user"/></svg>
+				<svg class="icon-inline icon-2x icon-w-12 {{ icon_desktop_class }}">
+					{% include "snipplets/svg/user.tpl" %}
+				</svg>
 				{% if store.country == 'AR'%}
 					{# Notification tooltip for quick login on AR stores #}
 					<a data-toggle="#quick-login" class="js-modal-open js-quick-login-badge" style="display: none;">
 						<div class="badge badge-overlap swing"></div>
 					</a>
 				{% endif %}
-				{# <span class="utility-name transition-soft d-block{% if settings.icons_solid %} font-weight-bold{% endif %} {% if settings.icons_size_desktop == 'small' %}d-md-inline-block pt-0 ml-1{% endif %}">
+				{# <span class="utility-name transition-soft d-block{% if settings.icons_solid %} font-weight-bold{% endif %} {% if settings.icons_size_desktop == 'small' %}d-lg-inline-block pt-0 ml-1{% endif %}">
 					{% if not customer %}
 						{{ 'Mi cuenta' | translate }}
 					{% else %}
@@ -97,14 +103,14 @@
 		</div>
 	</div>
 	{% if not store.is_catalog %}    
-	<div class="utilities-item {% if settings.icons_size_desktop == 'small' %}w-md-auto ml-md-4{% endif %}">
+	<div class="utilities-item {% if settings.icons_size_desktop == 'small' %}w-lg-auto ml-lg-4{% endif %}">
 		<div id="ajax-cart" class="cart-summary transition-soft utility-head text-center" data-component='cart-button'>
 			<a {% if settings.ajax_cart and template != 'cart' %}href="#" class="js-modal-open js-toggle-cart js-fullscreen-modal-open" data-toggle="#modal-cart" data-modal-url="modal-fullscreen-cart"{% else %}href="{{ store.cart_url }}"{% endif %}>
 				<svg class="icon-inline icon-2x icon-w-14 {{ icon_desktop_class }}">
 					{# <use xlink:href="#cart"/> #}
 					{% include "snipplets/svg/bag.tpl" %}
 				</svg>
-				{# <span class="utility-name transition-soft d-none {% if settings.icons_solid %} font-weight-bold{% endif %} {% if settings.icons_size_desktop == 'small' %}d-md-inline-block pt-0 ml-1{% else %}d-md-block{% endif %}">{{ 'Mi carrito' | translate }}</span> #}
+				{# <span class="utility-name transition-soft d-none {% if settings.icons_solid %} font-weight-bold{% endif %} {% if settings.icons_size_desktop == 'small' %}d-lg-inline-block pt-0 ml-1{% else %}d-lg-block{% endif %}">{{ 'Mi carrito' | translate }}</span> #}
 				{% if cart.items_count > 0 %}
 					<span class="js-cart-widget-amount badge badge-amount">
 						{{ "{1}" | translate(cart.items_count) }}
