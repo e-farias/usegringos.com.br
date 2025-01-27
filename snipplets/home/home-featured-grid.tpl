@@ -127,7 +127,7 @@
         {% endif %}
 
         {% if section_name == 'new' %}
-            <div class="d-flex col-12 justify-content-center" style="margin-bottom: 4rem">
+            <div class="d-flex col-12 justify-content-center">
                 <a
                     href="/colecao-verao"
                     class="d-flex justify-content-center align-items-center svg-icon-text"

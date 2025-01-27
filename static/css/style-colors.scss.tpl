@@ -1222,7 +1222,7 @@ input::-webkit-outer-spin-button{
   display: block;
   @extend %element-margin;
   line-height: 42px;
-  color: $main-foreground;
+  color: #0B0B0B;
 }
 
 .instafeed-info {
@@ -1765,7 +1765,7 @@ input::-webkit-outer-spin-button{
   $footer-legal-background-color: $footer-background;
   $footer-legal-foreground-color: $footer-foreground;
 {% else %}
-  $footer-background-color: rgba($main-foreground, .1);
+  $footer-background-color: $main-foreground;
   $footer-foreground-color: $primary-color;
   $footer-legal-background-color: $primary-color;
   $footer-legal-foreground-color: $main-background;

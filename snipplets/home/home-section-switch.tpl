@@ -12,15 +12,6 @@
         {% endif %}
     </section>
 
-{% elseif section_select == 'products' %}
-
-    {#  **** Featured products ****  #}
-    {% if show_help or (show_component_help and not has_products) %}
-        {% include 'snipplets/defaults/home/featured_products_help.tpl' with { products_title: 'Destacados' | translate, data_store: 'home-products-featured', highlighted_products_setting_name: 'featured' }  %}
-    {% else %}
-        {% include 'snipplets/home/home-featured-products.tpl' with {'has_featured': true} %}
-    {% endif %}
-
 {# {% elseif section_select == 'informatives' %} #}
 
     {#  **** Informative banners ****  #}
@@ -111,9 +102,8 @@
     {% else %}
     {% endif %} #}
     {% include 'snipplets/home/home-brands.tpl' %}
-
     {% include 'snipplets/home/home-category-pills.tpl' %}
-
+    {% include 'snipplets/home/home-featured-products.tpl' with {'has_featured': true} %}
 {# {% elseif section_select == 'video' %} #}
 
     {#  **** Video embed ****  #}
@@ -125,32 +115,9 @@
         {% endif %}
     </section> #}
 
-{% elseif section_select == 'sale' %}
-
-    {#  **** Sale products ****  #}
-    {% if show_help or (show_component_help and not has_products) %}
-        {% include 'snipplets/defaults/home/featured_products_help.tpl' with { products_title: 'Ofertas' | translate, data_store: 'home-products-sale', highlighted_products_setting_name: 'sale' }  %}
-    {% else %}
-        {% include 'snipplets/home/home-featured-products.tpl' with {'has_sale': true} %}
-    {% endif %}
-
-{% elseif section_select == 'new' %}
-
-    {#  **** New products ****  #}
-    {% if show_help or (show_component_help and not has_products) %}
-        {% include 'snipplets/defaults/home/featured_products_help.tpl' with { products_title: 'Novedades'| translate, data_store: 'home-products-new', highlighted_products_setting_name: 'new' }  %}
-    {% else %}
-        {% include 'snipplets/home/home-featured-products.tpl' with {'has_new': true} %}
-    {% endif %}
-
-{% elseif section_select == 'instafeed' %}
-
-    {#  **** Instafeed ****  #}
-    {% if show_help or (show_component_help and not has_instafeed) %}
-        {% snipplet 'defaults/home/instafeed_help.tpl' %}
-    {% else %}
-        {% include 'snipplets/home/home-instafeed.tpl' %}
-    {% endif %}
+    {% include 'snipplets/home/home-featured-products.tpl' with {'has_new': true} %}
+    {% include 'snipplets/home/home-instafeed.tpl' %}
+    {% include 'snipplets/home/home-featured-products.tpl' with {'has_sale': true} %}
 
 {# {% elseif section_select == 'promotional' %} #}
 
