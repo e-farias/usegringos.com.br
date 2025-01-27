@@ -752,7 +752,7 @@ en "Featured"
 es_mx "Destacados"
 
 es "Novedades"
-pt "Lançamentos"
+pt "Nova coleção"
 en "News"
 es_mx "Novedades"
 

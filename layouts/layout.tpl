@@ -217,9 +217,6 @@
                     {% include "static/js/store.js.tpl" %}
                 {% endif %}
             });
-
-            {# Custom theme script #}
-            {% include "static/js/custom.js.tpl" %}
         </script>
 
         {# Google reCAPTCHA on register page #}

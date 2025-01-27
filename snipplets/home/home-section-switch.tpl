@@ -114,23 +114,16 @@
 
     {% include 'snipplets/home/home-category-pills.tpl' %}
 
-    {#  **** New products ****  #}
-    {% if show_help or (show_component_help and not has_products) %}
-        {% include 'snipplets/defaults/home/featured_products_help.tpl' with { products_title: 'Novedades'| translate, data_store: 'home-products-new', highlighted_products_setting_name: 'new' }  %}
-    {% else %}
-        {% include 'snipplets/home/home-featured-products.tpl' with {'has_new': true} %}
-    {% endif %}
-
-{% elseif section_select == 'video' %}
+{# {% elseif section_select == 'video' %} #}
 
     {#  **** Video embed ****  #}
-    <section class="section-video-home" data-store="home-video">
+    {# <section class="section-video-home" data-store="home-video">
         {% if show_help or (show_component_help and not has_video) %}
             {% snipplet 'defaults/home/video_help.tpl' %}
         {% else %}
             {% include 'snipplets/home/home-video.tpl' %}
         {% endif %}
-    </section>
+    </section> #}
 
 {% elseif section_select == 'sale' %}
 
@@ -139,6 +132,15 @@
         {% include 'snipplets/defaults/home/featured_products_help.tpl' with { products_title: 'Ofertas' | translate, data_store: 'home-products-sale', highlighted_products_setting_name: 'sale' }  %}
     {% else %}
         {% include 'snipplets/home/home-featured-products.tpl' with {'has_sale': true} %}
+    {% endif %}
+
+{% elseif section_select == 'new' %}
+
+    {#  **** New products ****  #}
+    {% if show_help or (show_component_help and not has_products) %}
+        {% include 'snipplets/defaults/home/featured_products_help.tpl' with { products_title: 'Novedades'| translate, data_store: 'home-products-new', highlighted_products_setting_name: 'new' }  %}
+    {% else %}
+        {% include 'snipplets/home/home-featured-products.tpl' with {'has_new': true} %}
     {% endif %}
 
 {% elseif section_select == 'instafeed' %}
@@ -161,9 +163,9 @@
         {% endif %}
     </section>
 
-{% elseif section_select == 'newsletter' %}
+{# {% elseif section_select == 'newsletter' %} #}
 
     {#  **** Newsletter ****  #}
-    {% include 'snipplets/newsletter.tpl' %}
+    {# {% include 'snipplets/newsletter.tpl' %} #}
 
 {% endif %}

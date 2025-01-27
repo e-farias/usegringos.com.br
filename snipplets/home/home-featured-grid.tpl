@@ -42,15 +42,40 @@
 {% endif %}
 
 <div class="container">
-    <div class="section-home-most-sale row js-products-{{ highlighted_products_setting_name }}-container" data-format="{{ section_format }}" data-desktop-columns="{% if settings.grid_columns == 2 %}4{% else %}3{% endif %}">
+    <div class="row js-products-{{ highlighted_products_setting_name }}-container" data-format="{{ section_format }}" data-desktop-columns="{% if settings.grid_columns == 2 %}4{% else %}3{% endif %}">
         
-        <div class="col-12 title">
+        {% if section_name == 'new' %}
+            <div class="d-flex col-12 justify-content-center mb-3 font-lexend-exa font-weight-light">
+                <p class="text-center text-uppercase">
+                    VERÃO 25’
+                </p>
+            </div>
+
+            <div class="d-flex col-12 justify-content-center mb-3 font-lexend-exa font-weight-bold">
+                <p class="text-center" style="font-size: 2rem; line-height: 1;">
+                    Moda Praia-Verão
+                </p>
+            </div>
+
+            <div class="d-flex col-12 justify-content-center font-lexend font-weight-light">
+                <p class="text-center">
+                    Um convite para respirar fundo, sentir a areia nos pés e deixar o ritmo desacelerar. A natureza nos inspira, o vento nos guia, o horizonte nos encanta.
+                </p>
+            </div>
+            <div class="d-flex col-12 justify-content-center mb-4 font-lexend font-weight-light">
+                <p class="text-center">
+                    A coleção traduz a leveza dos dias dourados. Descubra o equilíbrio entre estilo e simplicidade com looks que celebram o espírito do verão.
+                </p>
+            </div>
+        {% endif %}
+
+        <div class="col-12 title pl-4 pl-lg-0 p-lg-0">
             <h2 class="font-josefin-sans js-products-{{ highlighted_products_setting_name }}-title {% if settings.theme_rounded %}text-primary{% endif %}" {% if not section_title %}style="display: none"{% endif %}>{{ section_title }}</h2>
         </div>
 
         {% if use_slider %}
-            <div class="col-12 p-0">
-                <div class="js-swiper-{{ highlighted_products_setting_name }} swiper-container p-md-1">
+            <div class="col-12 p-0 pl-3 pl-lg-0" style="z-index:555;">
+                <div class="js-swiper-{{ highlighted_products_setting_name }} swiper-container">
                     <div class="swiper-wrapper">
         {% endif %}
 
@@ -93,11 +118,24 @@
         {% endif %}
 
         {% if use_slider %}
-            <div class="js-swiper-{{ highlighted_products_setting_name }}-prev swiper-button-prev d-none d-md-block svg-circle svg-circle-big svg-icon-text{% if settings.icons_solid %} svg-solid{% endif %}">
-                <svg class="icon-inline icon-2x mr-1 icon-flip-horizontal"><use xlink:href="#chevron"/></svg>
+            <div class="js-swiper-{{ highlighted_products_setting_name }}-prev swiper-button-prev d-none d-lg-flex svg-icon-text justify-content-center align-items-center" style="z-index:999; width: 50px; height: 50px; border-radius: 100%;">
+                <svg class="icon-inline icon-2x icon-flip-horizontal"><use xlink:href="#chevron"/></svg>
             </div>
-            <div class="js-swiper-{{ highlighted_products_setting_name }}-next swiper-button-next d-none d-md-block svg-circle svg-circle-big svg-icon-text{% if settings.icons_solid %} svg-solid{% endif %}">
-                <svg class="icon-inline icon-2x ml-1"><use xlink:href="#chevron"/></svg>
+            <div class="js-swiper-{{ highlighted_products_setting_name }}-next swiper-button-next d-none d-lg-flex svg-icon-text justify-content-center align-items-center" style="z-index:999; width: 50px; height: 50px; border-radius: 100%;">
+                <svg class="icon-inline icon-2x"><use xlink:href="#chevron"/></svg>
+            </div>
+        {% endif %}
+
+        {% if section_name == 'new' %}
+            <div class="d-flex col-12 justify-content-center" style="margin-bottom: 4rem">
+                <a
+                    href="/colecao-verao"
+                    class="d-flex justify-content-center align-items-center svg-icon-text"
+                    style="background: #F5F5F5; border-radius: .75rem; padding: 1rem 1.75rem;"
+                >
+                    <span class="mt-1" style="font-weight: 500;font-size: 14px; color: #494949;">VER MAIS</span>
+                    <svg class="icon-inline icon-md ml-2"><use xlink:href="#chevron"/></svg>
+                </a>
             </div>
         {% endif %}
     </div>

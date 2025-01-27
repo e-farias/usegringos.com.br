@@ -742,6 +742,9 @@ DOMContentLoaded.addEventOrExecute(() => {
                     breakpoints: {
                         768: {
                             slidesPerView: slidesPerViewDesktopVal,
+                        },
+                        992: {
+                            slidesPerView: 4
                         }
                     }
                 });
@@ -769,6 +772,9 @@ DOMContentLoaded.addEventOrExecute(() => {
                     breakpoints: {
                         768: {
                             slidesPerView: slidesPerViewDesktopVal,
+                        },
+                        992: {
+                            slidesPerView: 4
                         }
                     }
                 });
