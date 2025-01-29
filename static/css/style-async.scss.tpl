@@ -923,8 +923,8 @@ button{
     .nav-item {
       display: block;
       padding: 0;
-      border-top-style: solid;
-      border-top-width: 1px;
+      {# border-top-style: solid;
+      border-top-width: 1px; #}
     }
     .item-with-subitems {
       position: relative;
@@ -2072,6 +2072,27 @@ body.compensate-for-scrollbar{overflow:hidden}.fancybox-active{height:auto}.fanc
   @media (min-width: 1200px) {
     .container {
       max-width: 1170px;
+    }
+  }
+}
+
+footer {
+  #email {
+    padding: .75rem;
+    background: transparent;
+    color: #FFF;
+    font-size: 14px;
+
+    &::placeholder {
+      color: #FFF !important; 
+      opacity: 1; /* Firefox */
+    }
+  }
+  li {
+    list-style: none;
+    a {
+      font-size: 12px;
+      font-weight: 300;
     }
   }
 }

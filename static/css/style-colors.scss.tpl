@@ -1761,12 +1761,12 @@ input::-webkit-outer-spin-button{
 
 {% if settings.footer_colors %}
   $footer-background-color: $footer-background;
-  $footer-foreground-color: $footer-foreground;
+  $footer-foreground-color: #FFF;
   $footer-legal-background-color: $footer-background;
   $footer-legal-foreground-color: $footer-foreground;
 {% else %}
   $footer-background-color: $main-foreground;
-  $footer-foreground-color: $primary-color;
+  $footer-foreground-color: #FFF;
   $footer-legal-background-color: $primary-color;
   $footer-legal-foreground-color: $main-background;
 {% endif %}
