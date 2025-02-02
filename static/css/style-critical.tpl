@@ -1893,3 +1893,10 @@ p{
 .h-auto{height:auto!important}
 
 {% endraw %}
+
+#installment_mercado-pago #info-payment-method-boleto{
+  display: none !important;
+}
+#installment_mercado-pago .h6.mb-3:nth-of-type(2) {
+  display: none !important;
+}

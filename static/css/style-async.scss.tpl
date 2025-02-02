@@ -2088,11 +2088,55 @@ footer {
       opacity: 1; /* Firefox */
     }
   }
+
   li {
     list-style: none;
     a {
       font-size: 12px;
       font-weight: 300;
+
+      &:hover,
+      &:focus {
+        color: #FFF !important;
+      }
     }
   }
+  
+  .alert {
+    position: fixed;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    bottom: -3%;
+    z-index: 9999;
+    margin-bottom: 0;
+    font-size: 16px;
+    min-width: 90dvw;
+    border: none;
+    padding: 1rem;
+
+    @media (min-width: 992px) {
+      min-width: 52dvw;
+
+      &.alert-danger {
+        min-width: 40dvw;
+      }
+    }
+    
+    &.alert-success {
+      background: #3caf65;
+      color: #000;
+    }
+
+    &.alert-danger {
+      background: #cc4845;
+      color: #000;
+    }
+  }
+}
+
+#installment_mercado-pago #info-payment-method-boleto{
+  display: none !important;
+}
+#installment_mercado-pago .h6:nth-of-type(2) {
+  display: none !important;
 }

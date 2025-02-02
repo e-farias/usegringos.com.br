@@ -48,16 +48,22 @@
 			<input type="hidden" name="name" value="{{ "Sin nombre" | translate }}" />
 			<input type="hidden" name="message" value="{{ "Pedido de inscripción a newsletter" | translate }}" />
 			<input type="hidden" name="type" value="newsletter" />
+			<input type="hidden" name="contact" value="{{ "Enviar" | translate }}" />
 			<button
 				type="submit"
-				name="contact"
-				class="btn d-flex col-2 justify-content-center align-items-center"
+				class="btn d-flex col-2 justify-content-center align-items-center relative"
 				style="position: static; background: #FFF;border-radius: 10px 0 0 10px; height: auto; width: auto;max-width: 3rem;margin-left: auto;"
 			>
 				<!-- <input type="submit" name="contact" class="btn newsletter-btn" value="{{ "Enviar" | translate }}"> -->
 				<!-- <svg class="icon-inline newsletter-btn svg-icon-primary">
 					<use xlink:href="#arrow"/>
 				</svg> -->
+				{# <input
+					type="submit"
+					name="contact"
+					value="{{ "Enviar" | translate }}"
+					class="w-100 h-100 absolute"
+				> #}
 				<span style="filter: invert(1);width: .5rem;">
 					{% include "snipplets/svg/arrow.tpl" %}
 				</span>

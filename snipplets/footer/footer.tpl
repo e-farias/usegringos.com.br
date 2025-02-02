@@ -45,23 +45,28 @@
 					<div class="d-flex col-12 p-0">
 						<ul class="pl-0 m-0 font-lexend-exa">
 							<li class="mb-3">
-								<a href="">
+								<a href="https://usegringos.com.br/quem-somos">
 									Quem somos
 								</a>
 							</li>
 							<li class="mb-3">
-								<a href="">
+								<a href="https://usegringos.com.br/seguranca">
 									Segurança
 								</a>
 							</li>
 							<li class="mb-3">
-								<a href="">
+								<a href="https://usegringos.com.br/rastrear-pedido">
 									Rastrear Pedido
 								</a>
 							</li>
 							<li class="mb-3">
-								<a href="">
+								<a href="https://usegringos.com.br/trocas-e-devolucoes">
 									Trocas e Devoluções
+								</a>
+							</li>
+							<li class="mb-3">
+								<a href="https://usegringos.com.br/politica-de-privacidade">
+									Política de Privacidade
 								</a>
 							</li>
 						</ul>
@@ -157,9 +162,9 @@
 						/>
 					</a>
 
-					<a target="_blank" href="#" class="col-4 col-lg-2">
+					<a href="https://usegringos.com.br/seguranca" class="col-4 col-lg-2">
 						<img
-							src="{{ "images/compra-segura.webp" | static_url }}"
+							src="{{ "images/safe-buy.webp" | static_url }}"
 							class="w-100"
 						/>
 					</a>

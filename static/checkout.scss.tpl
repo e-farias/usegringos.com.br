@@ -144,7 +144,7 @@ a {
 
 .headbar-logo-img {
   max-width: 100%;
-  max-height: 80px;
+  max-height: 40px;
 }
 
 .headbar-logo-text {

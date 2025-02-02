@@ -2225,12 +2225,12 @@ en "We sent you an email to {1}"
 es_mx "Te enviamos un correo a {1}"
 
 es "El email o la contraseña no coinciden. Chequeá que estén bien escritos."
-pt "O e-mail ou a senha não correspondem. Verifique que estejam bem escritos."
+pt "O e-mail ou a senha não correspondem. Verifique que estejam certos."
 en "The e-mail or password do not match. Please check they are written right."
 es_mx "El correo electrónico o la contraseña no coinciden. Comprueba que estén bien escritos."
 
 es "Necesitamos tu email para enviarte nuestras novedades."
-pt "Precisamos do seu email para te enviar nossas novidades."
+pt "Precisamos do seu email para te enviar nossas promoções e atualizações."
 en "We need your e-mail so we can send you our news."
 es_mx "Necesitamos tu correo electónico para enviarte nuestras novedades."
 
